@@ -14,17 +14,19 @@ call vundle#end()            " required
 " install pathogen
 execute pathogen#infect()
 
-" automatically invoke nerdtree when opening Vim
-" autocmd vimenter * NERDTree
-
-filetype plugin indent on
+" filetype plugin indent on
 syntax on
 
 set tabstop=2															
 set shiftwidth=2															
-set number																			"set line numbers
+set number		
 
-:let mapleader = "-"
+
+let mapleader = "-"
+
+" open vimrc in a separate tab
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>j
+:nnoremap <leader>sv :source $MYVIMRC<cr>j
 
 " espace mode
 :inoremap hj <esc> 
@@ -62,8 +64,10 @@ set number																			"set line numbers
 :vnoremap " <esc>`<i"<esc>`>a"<esc>`<v`>ll			
 :vnoremap ' <esc>`<i'<esc>`>a'<esc>`<v`>ll
 
+" C++ abbreviations
+
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
 
 syntax enable
-colorscheme monokai
+colorscheme xterm16 
