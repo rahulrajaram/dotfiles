@@ -21,7 +21,6 @@ set tabstop=2
 set shiftwidth=2															
 set number		
 
-
 let mapleader = "-"
 
 " open vimrc in a separate tab
@@ -35,12 +34,6 @@ let mapleader = "-"
 :vnoremap hj <esc> 
 :vnoremap qw <esc>
 
-"delete a line in insert mode.
-:inoremap <c-d> <esc>ddi													
-
-"convert a word to upper case in insert mode.
-:inoremap <c-u> <esc>viw ui 											
-
 "toggle NERDtree window
 :nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
@@ -49,6 +42,17 @@ let mapleader = "-"
 :nnoremap <leader>d <c-w>l
 :nnoremap <leader>w <c-w>k
 :nnoremap <leader>s <c-w>j
+
+" movement
+:nnoremap U o
+:nnoremap L A<esc>
+
+" voiding defaults
+:inoremap <esc> <nop>
+:nnoremap <Up> <Nop>
+:nnoremap <Down> <Nop>
+:nnoremap <Left> <Nop>
+:nnoremap <Right> <Nop>
 
 " selection
 "select word
@@ -64,10 +68,16 @@ let mapleader = "-"
 :vnoremap " <esc>`<i"<esc>`>a"<esc>`<v`>ll			
 :vnoremap ' <esc>`<i'<esc>`>a'<esc>`<v`>ll
 
+"delete a line in insert mode.
+:inoremap <c-d> <esc>ddi								
+
+"convert a word to upper case in insert mode.
+:inoremap <c-u> <esc>viw ui 											
+
 " C++ abbreviations
 
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
 
 syntax enable
-colorscheme xterm16 
+colorscheme monokai 
