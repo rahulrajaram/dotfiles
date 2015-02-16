@@ -41,11 +41,12 @@ let mapleader = "-"
 :nnoremap <leader>a <c-w>h
 :nnoremap <leader>d <c-w>l
 :nnoremap <leader>w <c-w>k
-:nnoremap <leader>s <c-w>j
+:nnoremap <leader>z <c-w>j
+
 
 " movement
-:nnoremap U o
-:nnoremap L A<esc>
+:nnoremap H 0
+:nnoremap L $
 
 " voiding defaults
 :inoremap <esc> <nop>
@@ -74,10 +75,12 @@ let mapleader = "-"
 "convert a word to upper case in insert mode.
 :inoremap <c-u> <esc>viw ui 											
 
-" C++ abbreviations
+" C++ abbreviations and autocmds
 
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
+Plugin 'morhetz/gruvbox'
 
 syntax enable
-colorscheme monokai 
+colorscheme gruvbox 
+
