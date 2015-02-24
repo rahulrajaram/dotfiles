@@ -86,6 +86,7 @@ let mapleader = "-"
 :inoremap <c-u> <esc>viw ui 											
 
 " C++ abbreviations and autocmds
+:iabbrev incldue include
 
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
