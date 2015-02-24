@@ -1,0 +1,7 @@
+alias vimrc="vim ~/.vimrc"
+alias bashrc="vim ~/.bashrc"
+alias docs="cd ~/Documents"
+alias statropia="cd ~/Documents/statropia"
+alias codeeval="cd ~/Documents/codeeval"
+alias oberon="cd ~/Documents/oberon7"
+alias cvim="cp ~/.vimrc ~/Documents/vimrc/.vimrc"

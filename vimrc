@@ -30,6 +30,7 @@ let mapleader = "-"
 " espace mode
 :inoremap hj <esc> 
 :inoremap qw <esc>
+:inoremap <leader>qw <esc>:w<cr>i 
 
 :vnoremap hj <esc> 
 :vnoremap qw <esc>
@@ -83,4 +84,3 @@ Plugin 'morhetz/gruvbox'
 
 syntax enable
 colorscheme gruvbox 
-
