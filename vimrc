@@ -30,7 +30,16 @@ let mapleader = "-"
 " espace mode
 :inoremap hj <esc> 
 :inoremap qw <esc>
+
+" save and exit
 :inoremap <leader>qw <esc>:w<cr>i 
+:nnoremap <leader>qs <esc>:wq<cr>
+:inoremap <leader>qs <esc>:wq<cr>
+
+" exit without save
+:nnoremap <leader>qd <esc>:q!<cr>
+:inoremap <leader>qd <esc>:q!<cr>
+
 
 :vnoremap hj <esc> 
 :vnoremap qw <esc>
