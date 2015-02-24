@@ -33,12 +33,12 @@ let mapleader = "-"
 
 " save and exit
 :inoremap <leader>qw <esc>:w<cr>i 
-:nnoremap <leader>qs <esc>:wq<cr>
-:inoremap <leader>qs <esc>:wq<cr>
+:nnoremap <leader>qd <esc>:wq<cr>
+:inoremap <leader>qd <esc>:wq<cr>
 
 " exit without save
-:nnoremap <leader>qd <esc>:q!<cr>
-:inoremap <leader>qd <esc>:q!<cr>
+:nnoremap <leader>qr <esc>:q!<cr>
+:inoremap <leader>qr <esc>:q!<cr>
 
 
 :vnoremap hj <esc> 
@@ -86,6 +86,7 @@ let mapleader = "-"
 :inoremap <c-u> <esc>viw ui 											
 
 " C++ abbreviations and autocmds
+:iabbrev incldue include
 
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
@@ -93,3 +94,4 @@ Plugin 'morhetz/gruvbox'
 
 syntax enable
 colorscheme gruvbox 
+set background=dark
