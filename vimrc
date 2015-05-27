@@ -23,6 +23,10 @@ set number
 
 let mapleader = "-"
 
+" Window resize
+:nnoremap _ :vertical resize -5<cr>
+:nnoremap + :vertical resize +5<cr>
+
 " open vimrc in a separate tab
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>j
 :nnoremap <leader>sv :source $MYVIMRC<cr>j
@@ -32,7 +36,8 @@ let mapleader = "-"
 :inoremap qw <esc>
 
 " save and exit
-:inoremap <leader>qw <esc>:w<cr>i 
+:nnoremap <leader>qe <esc>:w<cr> 
+:inoremap <leader>qe <esc>:w<cr> 
 :nnoremap <leader>qd <esc>:wq<cr>
 :inoremap <leader>qd <esc>:wq<cr>
 
@@ -53,13 +58,17 @@ let mapleader = "-"
 :nnoremap <leader>w <c-w>k
 :nnoremap <leader>z <c-w>j
 
+" create split screen
+:nnoremap <leader>vs :vsplit 
+:nnoremap <leader>hs :split 
+:nnoremap <leader>d <c-w>l
 
 " movement
 :nnoremap H 0
 :nnoremap L $
 
 " voiding defaults
-:inoremap <esc> <nop>
+" :inoremap <esc> <nop>
 :nnoremap <Up> <Nop>
 :nnoremap <Down> <Nop>
 :nnoremap <Left> <Nop>
@@ -88,10 +97,20 @@ let mapleader = "-"
 " C++ abbreviations and autocmds
 :iabbrev incldue include
 
+" Ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" ctags setup
+set autochdir 
+set tags=./tags,tags;$HOME
+	
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
 Plugin 'morhetz/gruvbox'
 
 syntax enable
-colorscheme gruvbox 
+" set t_Co=256
+colorscheme monokai 
 set background=dark
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
