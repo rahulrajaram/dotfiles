@@ -4,15 +4,15 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 
-" install pathogen
-execute pathogen#infect()
+" set the runtime path to include vim-plug and initialize
+call plug#begin()
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+call plug#end()
 
 " filetype plugin indent on
 syntax on
@@ -104,13 +104,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set autochdir 
 set tags=./tags,tags;$HOME
 	
-Plugin 'sickill/vim-monokai'
-Plugin 'tpope/vim-rails'
-Plugin 'morhetz/gruvbox'
-
 syntax enable
 " set t_Co=256
-colorscheme monokai 
-set background=dark
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
