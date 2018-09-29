@@ -6,6 +6,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/Windows-PowerShell-Syntax-Plugin'
+Plugin 'ekalinin/Dockerfile.vim'
 call vundle#end()            " required
 
 " set the runtime path to include vim-plug and initialize
@@ -17,9 +21,10 @@ call plug#end()
 " filetype plugin indent on
 syntax on
 
-set tabstop=2															
-set shiftwidth=2															
-set number		
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set number
 
 let mapleader = "-"
 
@@ -99,6 +104,7 @@ let mapleader = "-"
 
 " Ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/vim-erlang-runtime/
 
 " ctags setup
 set autochdir 
