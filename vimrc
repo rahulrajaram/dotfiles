@@ -23,6 +23,7 @@ call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'fenetikm/falcon'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " filetype plugin indent on
